@@ -70,6 +70,8 @@ class Main {
     motor3.setId("3");
     motor3.setNama("Kawasaki H2R");
 
+    Motor motor4 = new Motor("4", "Yamaha Byson");
+
     User user1 = new User();
     user1.id = "1";
     user1.name = "aka";
@@ -85,6 +87,7 @@ class Main {
     Rental.motors.add(motor1);
     Rental.motors.add(motor2);
     Rental.motors.add(motor3);
+    Rental.motors.add(motor4);
 
     Rental.users.add(user1);
     Rental.users.add(user2);
