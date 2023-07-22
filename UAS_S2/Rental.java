@@ -66,11 +66,10 @@ class RentalMotor extends Rental {
     return isExist;
   }
 
-  // menambahkan Buku
   @Override
   public void addMotor(Motor motor) {
     if (isMotorIdExist(motor.getId())) {
-      System.out.println("Data Buku dengan ID " + motor.getId() + " Sudah Ada");
+      System.out.println("Data Motor dengan ID " + motor.getId() + " Sudah Ada");
     } else if (isMotorBorrowed(motor.getId())) {
       System.out.println("Motor dengan ID " + motor.getId() + " sudah ada dan Sedang Dipinjam");
     } else {
@@ -124,7 +123,7 @@ class RentalMotor extends Rental {
       Motor motor = this.users.get(userIndex).getMotorById(motorId);
 
       if (motor == null) {
-        throw new Exception("Motor dengan id " + motorId + " tidak dipinjam oleh member dengan ID " + user.getId());
+        throw new Exception("Motor dengan id " + motorId + " tidak dipinjam oleh user dengan ID " + user.getId());
       }
 
       this.motors.add(motor);

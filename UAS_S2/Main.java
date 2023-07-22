@@ -1,5 +1,3 @@
-
-// ini adalah commit pertama saya di github
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
