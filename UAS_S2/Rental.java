@@ -107,7 +107,7 @@ class RentalMotor extends Rental {
       User user = this.getUserById(userId);
       int userIndex = this.getUserIndex(user);
       this.motors.remove(motor);
-      this.users.get(userIndex).getborrowedMotors().add(motor);
+      this.users.get(userIndex).getBorrowedMotors().add(motor);
       System.out
           .println(
               "Motor dengan id " + motor.getId() + " telah berhasil dipinjam oleh user dengan ID " + user.getId());
@@ -128,7 +128,7 @@ class RentalMotor extends Rental {
       }
 
       this.motors.add(motor);
-      this.users.get(userIndex).borrowedMotors.remove(motor);
+      this.users.get(userIndex).getBorrowedMotors().remove(motor);
       System.out.println(
           "Motor dengan id " + motor.getId() + " telah berhasil dikembalikan oleh user dengan ID " + user.getId());
     } catch (Exception e) {

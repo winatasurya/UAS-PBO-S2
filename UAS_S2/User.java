@@ -9,25 +9,37 @@ interface Borrowable {
 }
 
 class User implements Borrowable {
-  String id;
-  String name;
-  ArrayList<Motor> borrowedMotors;
+  private String id;
+  private String name;
+  private ArrayList<Motor> borrowedMotors;
 
-  public User() {
+  public User(String id, String name) {
     this.id = id;
     this.name = name;
     this.borrowedMotors = new ArrayList<Motor>();
+  }
+
+  public User() {
+
   }
 
   public String getId() {
     return id;
   }
 
+  public void setId(String id) {
+      this.id = id;
+  }
+
   public String getName() {
     return name;
   }
 
-  public ArrayList<Motor> getborrowedMotors() {
+  public void setName(String name) {
+      this.name = name;
+  }
+
+  public ArrayList<Motor> getBorrowedMotors() {
     return borrowedMotors;
   }
 

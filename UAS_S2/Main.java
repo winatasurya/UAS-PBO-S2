@@ -73,25 +73,29 @@ class Main {
     Motor motor4 = new Motor("4", "Yamaha Byson");
 
     User user1 = new User();
-    user1.id = "1";
-    user1.name = "aka";
+    user1.setId("1");
+    user1.setName("aka");
 
     User user2 = new User();
-    user2.id = "2";
-    user2.name = "budi";
+    user2.setId("2");
+    user2.setName("budi");
 
     User user3 = new User();
-    user3.id = "3";
-    user3.name = "tono";
+    user3.setId("3");
+    user3.setName("tono");
+
+    User user4 = new User("4", "surya");
 
     Rental.motors.add(motor1);
     Rental.motors.add(motor2);
     Rental.motors.add(motor3);
     Rental.motors.add(motor4);
+    Rental.motors.add(new Motor());
 
     Rental.users.add(user1);
     Rental.users.add(user2);
     Rental.users.add(user3);
+    Rental.users.add(user4);
   }
 
   public static int chooseMenu() {
@@ -114,7 +118,7 @@ class Main {
 
   public static void showUsers() {
     for (User user : Rental.users) {
-      System.out.println(user.id + " " + user.name);
+      System.out.println(user.getId() + " " + user.getName());
     }
   }
 
@@ -122,10 +126,10 @@ class Main {
     User user = new User();
 
     System.out.print("Masukkan id user: ");
-    user.id = scan.next();
+    user.setId(scan.next());
 
     System.out.print("Masukkan name user: ");
-    user.name = scan.next();
+    user.setName(scan.next());
 
     Rental.addUser(user);
   }

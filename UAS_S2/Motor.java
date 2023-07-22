@@ -8,7 +8,8 @@ class Motor {
   }
 
   public Motor() {
-    
+    setId("5");
+    setNama("Yamaha");
   }
 
   public String getId() {
